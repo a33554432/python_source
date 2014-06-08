@@ -55,13 +55,9 @@ print "diaged_x"
 print diaged_x
 print ""
 
-# calc 
-#slope, intercept, r, _, _ = stats.linregress(diaged_x[:,0], y)
-#print slope
-#print intercept
-#print r
 
-for i in range(3):
+# ****** calc slopes and correlation_coefficients between diag_x and y ******
+for i in range(len(la)):
     slope, intercept, r, _, _ = stats.linregress(diaged_x[:,i], y)
     print "%dth PC lambda = %f" % (i , la_sorted[i])
     print "slope = %f, intercept = %f, r = %f\n" % (slope, intercept, r)
